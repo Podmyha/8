@@ -1,0 +1,17 @@
+Практ 10-4
+count = 0
+while True:
+    num = int(input("Введите стоимость товара. Если введёте 0 - касса выведет стоимость товара к оплате"))
+    if num < 0:
+        print("Товар не может стоить отрицательное количество рублей")
+        continue
+    elif num > 0:
+        count += num
+    elif num == 0:
+            if count > 1000:
+                itog = count - (count * 0.10)
+                print(f"К оплате:{itog}")
+                break
+            else:
+                print(f"К оплате:{count}")
+                break
