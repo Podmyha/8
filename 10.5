@@ -1,0 +1,22 @@
+Практ 10 - 5
+print("1. узнать баланс")
+print("2. снять 100")
+print("3. положить 100")
+print("4. выход")
+balance = 1000
+while True:
+    num = int(input("выберите пункт меню:"))
+    if num == 1:
+        print(f"Ваш текущий баланс{balance}")
+    elif num == 2:
+        if balance >= 100:
+            balance -= 100
+        else:
+            print("Гуляй вася")
+    elif num == 3:
+        balance += 100
+    elif num == 4:
+        print("Пака")
+        break
+    else:
+        print("Неверная команда")
