@@ -1,0 +1,27 @@
+odin = 1
+pvat = 5
+des = 10
+twenty_five = 25
+
+price = int(input("Не мало. Введите цену услуги"))
+
+x_odin = 0
+x_pvat = 0
+x_des = 0
+x_twenty_five = 0
+
+while price != 0:
+    if price >= twenty_five:
+        x_twenty_five += 1
+        price -= twenty_five
+    elif price >= des:
+        x_des += 1
+        price -= des
+    elif price >= pvat:
+        x_pvat += 1
+        price -= pvat
+    elif price >= odin:
+        x_odin += 1
+        price -= odin
+
+print(f"Четвертаков: {x_twenty_five}. Десяток: {x_des}. Пятёрок: {x_pvat}. Однёрок: {x_odin}")
