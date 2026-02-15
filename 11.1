@@ -1,0 +1,14 @@
+print("Тройки для уравнения")
+
+for n in range(1, 365 // 28 + 1):
+
+    for k in range(1, (365 - 28 * n) // 30 + 1):
+
+        Ostatok = 365 - 28 * n - 30 * k
+
+        if Ostatok > 0 and Ostatok % 31 == 0:
+            m = Ostatok // 31
+
+            print(f"n={n}, k={k}, m={m}")
+
+print("Готово")
