@@ -1,0 +1,28 @@
+import random
+
+rows = 4
+cols = 5
+
+arr = []
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(random.randint(-20, 20))
+    arr.append(row)
+
+print("Исходный список:")
+for row in arr:
+    print(row)
+
+result = []
+for i in range(len(arr)):
+    new_row = []
+    for j in range(len(arr[i])):
+        val = arr[i][j]
+        if val > 0:
+            new_row.append(val)
+    result.append(new_row)
+
+print("Только положительные элементы:")
+for row in result:
+    print(row)
