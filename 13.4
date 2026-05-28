@@ -1,0 +1,22 @@
+ip = input()
+
+parts = ip.split(".")
+
+is_valid = True
+
+if len(parts) != 4:
+    is_valid = False
+else:
+    for part in parts:
+        if not part.isdigit():
+            is_valid = False
+            break
+        number = int(part)
+        if number < 0 or number > 255:
+            is_valid = False
+            break
+
+if is_valid:
+    print("yes")
+else:
+    print("net")
